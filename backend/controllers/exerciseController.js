@@ -33,7 +33,7 @@ const deleteExercise = expressAsyncHandler(async (req,res) => {
     }
 
     const exercise = await Exercise.findOneAndDelete({_id: id})
-    if(!workout){
+    if(!exercise){
         return res.status(400).json({error: 'No such workout'})
     }
     res.status(200).json(exercise)
