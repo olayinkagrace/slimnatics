@@ -10,10 +10,10 @@ const {
     updateExercise
 } = require('../controllers/exerciseController')
 
-// const isAuth = require('../utils')
+const requireAuth = require('../middlewares/requireAuth')
 
 // // require auth for all workout routes
-// router.use(isAuth)
+router.use(requireAuth)
 
 
 

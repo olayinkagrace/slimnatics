@@ -15,7 +15,7 @@ const exerciseSchema = new Schema(
     load: {
       type: Number,
       required: true,
-    },
+    }
   },
   { timestamps: true }
 );
