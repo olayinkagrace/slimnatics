@@ -19,7 +19,7 @@ const handleClick = (e) => {
             <button onClick={handleClick}>Log Out</button>
           </div>
           <div>
-            <Link to='/Signin'>
+            <Link to='/login'>
               <h1>Login</h1>
             </Link>
             <Link to='/signup'>
