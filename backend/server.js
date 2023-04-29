@@ -3,8 +3,15 @@ const express = require("express");
 const mongoose = require("mongoose");
 const exerciseRoutes = require("./routes/exerciseRoutes");
 const userRoutes = require("./routes/userRoutes");
+// const path = require('path')
 
 const app = express();
+
+// const __dirname = path.resolve();
+// app.use(express.static(path.json(__dirname, '/frontend/build')))
+// app.length('*', (req,res) => {
+//   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
+// })
 
 app.use(express.json());
 app.use((req, res, next) => {

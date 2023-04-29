@@ -6,7 +6,8 @@ const expressAsyncHandler = require("express-async-handler");
 
 
 const getExercises = expressAsyncHandler(async (req,res) => {
-        const exercises = await Exercise.find()
+    const user_id = req.user._id
+        const exercises = await Exercise.find({user_id})
         .sort({createdAt: -1})
         res.status(200).json(exercises)
     }
@@ -81,7 +82,8 @@ const createExercise = expressAsyncHandler(async (req, res) => {
     // add doc to db
 
     try{
-        const exercise = await Exercise.create({title, load, reps})
+        const user_id = req.user._id
+        const exercise = await Exercise.create({title, load, reps, user_id})
         res.status(200).json(exercise)
     
     }
