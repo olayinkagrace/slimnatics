@@ -52,7 +52,7 @@ const signupUser = async (req, res) => {
       body: {
         name: name,
         intro:
-          "Welcome to Slimnatics! We're very excited to have you on board.This app will help you stay fit and also help you shed off that excess",
+          "Welcome to Slimnatics! We're very excited to have you on board.This app will help you stay fit and also help you shed off that excess weight",
       },
     };
     let mail = mailGenerator.generate(response);
